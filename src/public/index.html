@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Bookstore</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Online Bookstore</h1>
+      <!-- Add the search input and search button -->
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by title" />
+        <button id="searchButton">Search</button>
+      </div>
+    </header>
+    <main>
+      <section id="bookList">
+        <!-- Book listings will be displayed here -->
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Online Bookstore</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <!-- Link the main.js script file -->
+    <script>
+      // Fetch book data from the backend API
+      async function fetchBooks() {
+        try {
+          const response = await fetch("/api/books");
+          const books = await response.json();
+          displayBooks(books);
+        } catch (error) {
+          console.error("Error fetching books:", error);
+        }
+      }
+
+      // Display books in the bookList section
+      function displayBooks(books) {
+        const bookListSection = document.getElementById("bookList");
+        bookListSection.innerHTML = "";
+
+        books.forEach((book) => {
+          const bookCard = document.createElement("div");
+          bookCard.classList.add("book-card");
+
+          const title = document.createElement("h2");
+          title.textContent = book.title;
+
+          const author = document.createElement("p");
+          author.textContent = "Author: " + book.author;
+
+          const description = document.createElement("p");
+          description.textContent = book.description;
+
+          const price = document.createElement("p");
+          price.textContent = "Price: $" + book.price;
+
+          bookCard.appendChild(title);
+          bookCard.appendChild(author);
+          bookCard.appendChild(description);
+          bookCard.appendChild(price);
+
+          bookListSection.appendChild(bookCard);
+        });
+      }
+
+      // Load books when the page is loaded
+      document.addEventListener("DOMContentLoaded", () => {
+        fetchBooks();
+      });
+    </script>
+  </body>
+</html>

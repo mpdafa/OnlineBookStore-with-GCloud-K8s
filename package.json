@@ -1,0 +1,17 @@
+{
+  "name": "online-bookstore-dafa",
+  "version": "1.0.0",
+  "description": "An online bookstore project using Node.js and Cloud SQL",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3"
+  }
+}
