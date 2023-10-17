@@ -30,7 +30,7 @@ Pre-requisites :
 > kubectl delete pods --all -n default <br>
 > kubectl delete pods -l app=online-book-store <br>
 > docker run -it --rm online-book-store /bin/sh <br> 
- <br> Setting Up Google Cloud SQL 
+Setting Up Google Cloud SQL 
 <img src="image/google_cloud_db.jpg"> 
  <br> Login Page 
 <img src="image/login_page.jpg"> 
