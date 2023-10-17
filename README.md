@@ -5,11 +5,11 @@ Pre-requisites :
 3. Install minikube
 
 ## Starting Minikube and see running nodes
-> minikube start
-> minikube status
-> minikube service list
-> kubectl get nodes
-> minikube addons enable heapster; minikube addons enable ingress
+> minikube start <br>
+> minikube status <br>
+> minikube service list <br>
+> kubectl get nodes <br>
+> minikube addons enable heapster; minikube addons enable ingress <br>
 
 ## Building docker image
 docker build -t online-book-store .
