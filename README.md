@@ -29,12 +29,12 @@ Pre-requisites :
 > kubectl get pods online-book-store-2-cb944c756-66zgp -o jsonpath='{.spec.containers[*].name}' <br>
 > kubectl delete pods --all -n default <br>
 > kubectl delete pods -l app=online-book-store <br>
-> docker run -it --rm online-book-store /bin/sh <br> <br>
-Setting Up Google Cloud SQL <br>
-<img src="image/google_cloud_db.jpg"> <br>
+> docker run -it --rm online-book-store /bin/sh <br> 
+<br> Setting Up Google Cloud SQL <br>
+<img src="image/google_cloud_db.jpg"> 
 Login Page <br>
-<img src="image/login_page.jpg"> <br>
+<img src="image/login_page.jpg"> 
 Main Page <br>
-<img src="image/main_page.jpg"> <br>
+<img src="image/main_page.jpg">
 Main Page for Search Button <br>
 <img src="image/main_page2.jpg"> 
