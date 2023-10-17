@@ -17,7 +17,7 @@ Pre-requisites :
 ## Building docker image
 > docker build -t online-book-store . <br>
 
-## Applying
+## Deployment
 > kubectl apply -f app-deployment.yaml <br>
 > kubectl apply -f app-service.yaml <br>
 > kubectl apply -f app-ingress.yaml <br>
