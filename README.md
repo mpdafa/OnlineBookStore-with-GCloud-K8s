@@ -1,8 +1,11 @@
-# OnlineBookStore Deployment with Kubectl and Minikube
+# OnlineBookStore and Google Cloud DB Deployment with Kubectl and Minikube
 Pre-requisites : 
-1. Install docker
-2. Install kubectl
-3. Install minikube
+1. Deploy Google Cloud SQL Server
+2. Create database and insert data (can check sql_script.sql file)
+3. Whitelist your local public ip address
+4. Install docker
+5. Install kubectl
+6. Install minikube
 
 ## Starting Minikube and see running nodes
 > minikube start <br>
@@ -27,3 +30,6 @@ Pre-requisites :
 > kubectl delete pods --all -n default <br>
 > kubectl delete pods -l app=online-book-store <br>
 > docker run -it --rm online-book-store /bin/sh <br>
+
+❮img src="images/you-picture.png" 
+
