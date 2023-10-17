@@ -12,21 +12,18 @@ Pre-requisites :
 > minikube addons enable heapster; minikube addons enable ingress <br>
 
 ## Building docker image
-docker build -t online-book-store .
+docker build -t online-book-store . <br>
 
 ## Applying
-kubectl apply -f app-deployment.yaml
-kubectl apply -f app-service.yaml
-kubectl apply -f app-ingress.yaml
+kubectl apply -f app-deployment.yaml <br>
+kubectl apply -f app-service.yaml <br>
+kubectl apply -f app-ingress.yaml <br>
 
-## Troubleshoot if you got some errors
-kubectl get pods
-
-### Example Pods name
-kubectl logs online-book-store-2-768cf6f99f-d4kgl
-kubectl exec -it online-book-store-2-cb944c756-66zgp -- /bin/sh
-kubectl get pods online-book-store-2-cb944c756-66zgp -o jsonpath='{.spec.containers[*].name}'
-
-kubectl delete pods --all -n default
-kubectl delete pods -l app=online-book-store
-docker run -it --rm online-book-store /bin/sh
+## Troubleshooting if you got some errors
+kubectl get pods <br>
+kubectl logs online-book-store-2-768cf6f99f-d4kgl #### Example Pods Name <br>
+kubectl exec -it online-book-store-2-cb944c756-66zgp -- /bin/sh <br>
+kubectl get pods online-book-store-2-cb944c756-66zgp -o jsonpath='{.spec.containers[*].name}' <br>
+kubectl delete pods --all -n default <br>
+kubectl delete pods -l app=online-book-store <br>
+docker run -it --rm online-book-store /bin/sh <br>
