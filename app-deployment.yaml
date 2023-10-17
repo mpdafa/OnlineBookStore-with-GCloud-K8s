@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: online-book-store-2
+spec:
+  replicas: 4 # Set the desired number of replicas
+  selector:
+    matchLabels:
+      app: online-book-store-2
+  template:
+    metadata:
+      labels:
+        app: online-book-store-2
+    spec:
+      containers:
+        - name: online-book-store-2
+          image: online-book-store-2:1.0 # Replace with your image name and tag
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 3000
