@@ -31,7 +31,7 @@ Pre-requisites :
 > kubectl delete pods -l app=online-book-store <br>
 > docker run -it --rm online-book-store /bin/sh <br>
 
-<img src="image/google_cloud_db.png">
-<img src="image/login_page.png">
-<img src="image/main_page.png">
-<img src="image/main_page2.png">
+<img src="image/google_cloud_db.jpg">
+<img src="image/login_page.jpg">
+<img src="image/main_page.jpg">
+<img src="image/main_page2.jpg">
