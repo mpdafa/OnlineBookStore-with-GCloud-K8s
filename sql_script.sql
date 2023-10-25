@@ -37,4 +37,4 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (username, password) VALUES
-  ('dafa', MD5('dafafikra123'));
+  ('dafa', MD5('hey123'));
