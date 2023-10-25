@@ -12,6 +12,7 @@ Pre-requisites :
 > minikube status <br>
 > minikube service list <br>
 > kubectl get nodes <br>
+> eval $(minikube docker-env) # For change environment of docker on minikube <br>
 > minikube addons enable heapster; minikube addons enable ingress <br>
 
 ## Building docker image
