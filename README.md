@@ -22,6 +22,7 @@ Pre-requisites :
 > kubectl apply -f app-deployment.yaml <br>
 > kubectl apply -f app-service.yaml <br>
 > kubectl apply -f app-ingress.yaml <br>
+> kubectl port-forward online-book-store 3000:3000 <br>
 
 ## Troubleshooting if you got some errors
 > kubectl get pods <br>
